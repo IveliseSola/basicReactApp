@@ -23,8 +23,6 @@ class App extends Component {
 
     if (clickedVillain[0].clicked) {
 
-      // this.setState({ currentScore: 0 });
-
       villainsArray.forEach( villain => {
         villain.clicked = false;
       });
@@ -39,7 +37,6 @@ class App extends Component {
       this.state.currentScore += 1;
 
       if (this.state.currentScore > this.state.bestScore) {
-        // this.state.bestScore = this.state.currentScore;
         this.setState({ bestScore: this.state.currentScore });
       }
 
@@ -66,7 +63,6 @@ class App extends Component {
       villainsArray.sort(function (a, b) { return 0.5 - Math.random() });
 
       this.setState({ villainsArray: villainsArray });
-      this.setState({ currentScore: this.state.currentScore });
     }
   };
 
@@ -75,7 +71,7 @@ class App extends Component {
       <Wrapper>
         <Nav
           score={this.state.currentScore}
-          topScore={this.state.topScore}
+          topScore={this.state.bestScore}
         />
 
         <Jumbotron>

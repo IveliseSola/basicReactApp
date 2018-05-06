@@ -25,8 +25,8 @@ class App extends Component {
 
       // this.setState({ currentScore: 0 });
 
-      villainsArray.forEach((villain, i) => {
-        villain[i].clicked = false;
+      villainsArray.forEach( villain => {
+        villain.clicked = false;
       });
 
       this.setState({ currentScore: 0 });
@@ -58,8 +58,9 @@ class App extends Component {
       // this.state.bestScore = 8;
       this.setState({ bestScore: 8 });
 
-      villainsArray.forEach((villain, i) => {
-        villain[i].clicked = false;
+      villainsArray.forEach( villain => {
+        villain.clicked = false;
+      
       });
 
       villainsArray.sort(function (a, b) { return 0.5 - Math.random() });

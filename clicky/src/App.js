@@ -12,7 +12,8 @@ class App extends Component {
   state = {
     villainsArray,
     currentScore: 0,
-    bestScore: 0
+    bestScore: 0,
+    message:" "
   };
 
   handleClick = id => {
@@ -29,6 +30,7 @@ class App extends Component {
 
       this.setState({ currentScore: 0 });
       this.setState({ villainsArray });
+      this.setState({message: "Oops! Try again!"})
 
     } else if (this.state.currentScore < 7) {
 
@@ -44,6 +46,7 @@ class App extends Component {
 
       this.setState({ villainsArray: villainsArray });
       this.setState({ currentScore: this.state.currentScore });
+      this.setState({ message: "Keep going!"})
 
     } else {
 
@@ -51,8 +54,7 @@ class App extends Component {
 
       this.setState({ currentScore: 0 });
 
-      alert(`WOW!!! You win! Let's see if you can do it again!`);
-      // this.state.bestScore = 8;
+      this.setState({ message: "WOW!!! You win! Let's see if you can do it again!"});
       this.setState({ bestScore: 8 });
 
       villainsArray.forEach( villain => {
@@ -75,7 +77,7 @@ class App extends Component {
         />
 
         <Jumbotron>
-
+          {this.state.message}
         </Jumbotron>
 
         <Container>

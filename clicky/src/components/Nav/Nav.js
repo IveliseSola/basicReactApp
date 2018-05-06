@@ -8,12 +8,12 @@ const Nav = props => (
       <span className="navbar-toggler-icon"></span>
     </button>
   
-    <div className="collapse navbar-collapse" id="navbarColor03">
+    <div className="collapse navbar-collapse scores" id="navbarColor03">
       <ul className="navbar-nav mr-auto">
-        <li className="nav-item score">
+        <li className="nav-item ">
           <a className="nav-link" href="#">Current Score: {props.score}</a>
         </li>
-        <li className="nav-item score">
+        <li className="nav-item ">
           <a className="nav-link" href="#">Top Score: {props.topScore}</a>
         </li>
       </ul>

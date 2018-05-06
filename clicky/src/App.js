@@ -3,6 +3,7 @@ import Villains from "./components/Villains";
 import Nav from "./components/Nav";
 import Wrapper from "./components/Wrapper";
 import Jumbotron from "./components/Jumbotron";
+import Footer from "./components/Footer";
 import { Container, Row, Col } from "./components/Grid";
 import villainsArray from "./villains.json";
 import './App.css';
@@ -13,7 +14,7 @@ class App extends Component {
     villainsArray,
     currentScore: 0,
     bestScore: 0,
-    message:" "
+    message: " "
   };
 
   handleClick = id => {
@@ -24,13 +25,13 @@ class App extends Component {
 
     if (clickedVillain[0].clicked) {
 
-      villainsArray.forEach( villain => {
+      villainsArray.forEach(villain => {
         villain.clicked = false;
       });
 
       this.setState({ currentScore: 0 });
       this.setState({ villainsArray });
-      this.setState({message: "Oops! Try again!"})
+      this.setState({ message: "Oops! Try again!" })
 
     } else if (this.state.currentScore < 7) {
 
@@ -46,7 +47,7 @@ class App extends Component {
 
       this.setState({ villainsArray: villainsArray });
       this.setState({ currentScore: this.state.currentScore });
-      this.setState({ message: "Keep going!"})
+      this.setState({ message: "Keep going!" })
 
     } else {
 
@@ -54,12 +55,12 @@ class App extends Component {
 
       this.setState({ currentScore: 0 });
 
-      this.setState({ message: "WOW!!! You win! Let's see if you can do it again!"});
+      this.setState({ message: "WOW!!! You win! Let's see if you can do it again!" });
       this.setState({ bestScore: 8 });
 
-      villainsArray.forEach( villain => {
+      villainsArray.forEach(villain => {
         villain.clicked = false;
-      
+
       });
 
       villainsArray.sort(function (a, b) { return 0.5 - Math.random() });
@@ -94,6 +95,16 @@ class App extends Component {
             ))}
           </Row>
         </Container>
+        {/* < Container>
+          <Row>
+            <Col size="md-12">
+            </Col>
+          </Row>
+        </Container> */}
+           <Footer>
+          </Footer>   
+              
+        
       </Wrapper>
     );
   }

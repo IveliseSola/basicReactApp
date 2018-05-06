@@ -2,7 +2,7 @@
 
 #### **General**
 
-CDVG is a memory game, it lets you click on an image to earn points, but if yout click on any more than once your *Current Score* wil be reseted. Your *Best Score* save your progress.
+CDVG is a memory game, it lets you click on an image to earn points, but if yout click on any more than once your *Current Score* wil be reset, the *Best Score* save your progress.
 
 #### Technology
 1. React

@@ -95,16 +95,8 @@ class App extends Component {
             ))}
           </Row>
         </Container>
-        {/* < Container>
-          <Row>
-            <Col size="md-12">
-            </Col>
-          </Row>
-        </Container> */}
-           <Footer>
-          </Footer>   
-              
-        
+        <Footer>
+        </Footer>
       </Wrapper>
     );
   }

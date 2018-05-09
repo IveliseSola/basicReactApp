@@ -2,7 +2,7 @@
   "name": "clicky",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ivelisesola.github.io/basicReactApp",
+  "homepage": "https://ivelisesola.github.io/clickyDisneyVillainsGame",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "react": "^16.3.2",
